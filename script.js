@@ -43,7 +43,6 @@ document.querySelectorAll(".mobile-input").forEach((input) => {
   });
 });
 // dashboard search
-
 function searchAdvisor() {
   const value = searchInput.value.toLowerCase();
   document.querySelectorAll(".advisor-item").forEach((card) => {
