@@ -51,3 +51,84 @@ function searchAdvisor() {
     card.style.display = name.includes(value) ? "block" : "none";
   });
 }
+// // optimize code
+// // Wait until HTML is fully loaded
+// document.addEventListener("DOMContentLoaded", () => {
+//   setupOTPInputs();
+//   setupMobileValidation();
+// });
+
+// // ===============================
+// // SHOW / HIDE SECTIONS
+// // ===============================
+
+// function toggleSection(hideId, showId) {
+//   document.getElementById(hideId).classList.add("d-none");
+//   document.getElementById(showId).classList.remove("d-none");
+// }
+
+// function showOTP() {
+//   toggleSection("mobileSection", "otpSection");
+// }
+
+// function editNumber() {
+//   toggleSection("otpSection", "mobileSection");
+// }
+
+// // ===============================
+// // OTP AUTO FOCUS
+// // ===============================
+
+// function setupOTPInputs() {
+//   const otpInputs = document.querySelectorAll(".otp-box input");
+
+//   otpInputs.forEach((input, index) => {
+//     input.addEventListener("input", () => {
+//       if (input.value && otpInputs[index + 1]) {
+//         otpInputs[index + 1].focus();
+//       }
+//     });
+//   });
+// }
+
+// // ===============================
+// // MOBILE NUMBER VALIDATION
+// // ===============================
+
+// function setupMobileValidation() {
+//   const mobileInputs = document.querySelectorAll(".mobile-input");
+
+//   mobileInputs.forEach((input) => {
+//     input.addEventListener("input", () => validateMobile(input));
+//   });
+// }
+
+// function validateMobile(input) {
+//   // Allow only numbers
+//   input.value = input.value.replace(/\D/g, "").slice(0, 10);
+
+//   const icon = input.parentElement.querySelector("i");
+//   const isValid = input.value.length === 10;
+
+//   input.classList.toggle("is-valid", isValid);
+//   input.classList.toggle("is-invalid", !isValid);
+
+//   icon.className = isValid
+//     ? "bi bi-check-circle-fill text-success"
+//     : "bi bi-exclamation-circle-fill text-danger";
+// }
+
+// // ===============================
+// // DASHBOARD SEARCH
+// // ===============================
+
+// function searchAdvisor() {
+//   const searchInput = document.getElementById("searchInput");
+//   const value = searchInput.value.toLowerCase();
+
+//   document.querySelectorAll(".advisor-item").forEach((card) => {
+//     const name = card.querySelector(".advisor-name").innerText.toLowerCase();
+
+//     card.style.display = name.includes(value) ? "block" : "none";
+//   });
+// }
